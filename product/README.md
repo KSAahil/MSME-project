@@ -3,6 +3,7 @@
 A runnable mobile-first invoice-to-cash assistant for Indian small businesses.
 
 The name is configured through `NEXT_PUBLIC_PRODUCT_NAME`; “AI Munim” remains a working name and can be changed later.
+The bundled demonstration is localised to a sample industrial-services business in Raipur, Chhattisgarh (GST state code 22).
 
 ## What works now
 
@@ -63,6 +64,8 @@ Open `http://localhost:3000`.
 The first run creates local demo data under `.data/`. That directory is ignored by Git. Do not put real customer data in the local prototype.
 
 ## Optional OpenAI integration
+
+This is not required to start the product or run the current demo. Without an API key, constrained invoice commands use the deterministic parser. The API can be added later to improve interpretation of varied natural language; voice transcription is a separate later integration.
 
 Set these only on the server in `.env.local`:
 

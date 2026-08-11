@@ -12,13 +12,13 @@ const businessId = "business_demo";
 const defaultData: DatabaseShape = {
   businesses: [{
     id: businessId,
-    name: "Arora Business Solutions",
-    legalName: "Arora Business Solutions",
+    name: "Shree Industrial Services",
+    legalName: "Shree Industrial Services",
     gstin: "",
     gstRegistered: true,
-    address: "Jaipur, Rajasthan",
-    stateCode: "08",
-    stateName: "Rajasthan",
+    address: "Raipur, Chhattisgarh",
+    stateCode: "22",
+    stateName: "Chhattisgarh",
     phone: "+91 98765 43210",
     email: "owner@example.com",
     upiId: "merchant@upi",
@@ -30,9 +30,9 @@ const defaultData: DatabaseShape = {
     updatedAt: now,
   }],
   customers: [
-    { id: "cus_sharma", businessId, name: "Sharma Traders", phone: "+91 98111 11111", email: "", gstin: "", address: "Jaipur, Rajasthan", stateCode: "08", stateName: "Rajasthan", createdAt: now, updatedAt: now },
+    { id: "cus_sharma", businessId, name: "Sharma Traders", phone: "+91 98111 11111", email: "", gstin: "", address: "Raipur, Chhattisgarh", stateCode: "22", stateName: "Chhattisgarh", createdAt: now, updatedAt: now },
     { id: "cus_gupta", businessId, name: "Gupta Enterprises", phone: "+91 98222 22222", email: "", gstin: "", address: "New Delhi", stateCode: "07", stateName: "Delhi", createdAt: now, updatedAt: now },
-    { id: "cus_rahul", businessId, name: "Rahul Services", phone: "+91 98333 33333", email: "", gstin: "", address: "Jaipur, Rajasthan", stateCode: "08", stateName: "Rajasthan", createdAt: now, updatedAt: now },
+    { id: "cus_rahul", businessId, name: "Rahul Services", phone: "+91 98333 33333", email: "", gstin: "", address: "Bhilai, Chhattisgarh", stateCode: "22", stateName: "Chhattisgarh", createdAt: now, updatedAt: now },
   ],
   items: [
     { id: "item_box", businessId, name: "Boxes", description: "Boxes", unit: "Boxes", unitPricePaise: 85000, taxRateBps: 1800, hsnSac: "", createdAt: now, updatedAt: now },

@@ -6,11 +6,11 @@ Determine whether a specific group of Indian small-business owners will trust an
 
 ## Sample plan
 
-Interview 30 owners/operators in one city:
+Interview 30 owners/operators in the Raipur–Durg–Bhilai cluster:
 
-- 10 service contractors/maintenance/installers;
-- 10 agencies/professional service firms;
-- 10 B2B traders/distributors.
+- 20 industrial service contractors, maintenance/repair/installers, and small fabricators;
+- 5 B2B traders/distributors as a comparison cohort;
+- 5 agencies/professional service firms as a comparison cohort.
 
 Within each cohort include:
 
@@ -185,7 +185,7 @@ Use a fixed evaluation set plus user-specific examples:
 1. “Sharma Traders ka invoice bana do, 25 boxes × ₹850, GST 18%, 15 din credit.”
 2. “Rate GST inclusive hai.”
 3. “Nahi 25 nahi, 35 boxes.”
-4. “Customer Delhi ka hai, hum Jaipur se bill kar rahe hain.”
+4. “Customer Delhi ka hai, hum Raipur se bill kar rahe hain.”
 5. “Rahul ne 5,000 de diya, baki kitna?”
 6. “Kal due customers ko polite reminder ready kar do.”
 7. “Is month kitni sale aur collection hui?”

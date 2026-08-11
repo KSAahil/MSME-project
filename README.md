@@ -6,6 +6,8 @@ Strategy and build repository for a mobile-first, conversational business assist
 
 The first working vertical slice is in [product](product/README.md). It runs locally without external credentials and includes invoice drafting/confirmation, deterministic GST calculations, PDF and UPI QR generation, receivables, partial payments, customer memory, CA export, and audit events.
 
+The current launch hypothesis is Chhattisgarh, starting with the Raipur–Durg–Bhilai cluster and industrial service contractors/small fabricators. See the [pilot decision brief](docs/08_CHHATTISGARH_PILOT_DECISION.md).
+
 ## Current recommendation
 
 Do **not** begin as a full accounting/ERP replacement. Begin as an **invoice-to-cash copilot** for GST-registered, owner-led businesses that already sell and follow up on WhatsApp:
@@ -28,6 +30,7 @@ This wedge is narrower than “AI Munim”, but it has a clearer return on inves
 - [Compliance and risk](docs/05_COMPLIANCE_RISK.md) — GST, WhatsApp, UPI, data protection, recordkeeping, and risk controls
 - [Customer discovery guide](docs/06_CUSTOMER_DISCOVERY.md) — interview script, scorecard, and pilot plan
 - [End-to-end build roadmap](docs/07_END_TO_END_BUILD_ROADMAP.md) — implementation phases, requirements, gates, team, and first 30 days
+- [Chhattisgarh pilot decision](docs/08_CHHATTISGARH_PILOT_DECISION.md) — launch cluster, first customer profile, recruitment, CA review, and AI API staging
 - [Runnable product and developer guide](product/README.md) — current implementation, setup, limitations, tests, and next engineering gates
 - [Research sources](RESEARCH_SOURCES.md) — primary and supporting sources, with access dates
 

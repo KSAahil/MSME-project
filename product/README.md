@@ -63,6 +63,16 @@ Open `http://localhost:3000`.
 
 The first run creates local demo data under `.data/`. That directory is ignored by Git. Do not put real customer data in the local prototype.
 
+## Vercel demo deployment
+
+Import `KSAahil/MSME-project` into Vercel with **Root Directory: `product`**, framework **Next.js**, and Node.js **24.x**. The repository contains the app in a subdirectory, so the root setting is required.
+
+Connect a new **private Vercel Blob store** to this project. Vercel supplies `BLOB_READ_WRITE_TOKEN`; redeploy after connecting. Do not set `APP_DATA_FILE` on Vercel or use `/tmp` for invoice storage. The server fails clearly if hosted storage is missing.
+
+Hosted mode uses a separate random, HTTP-only cookie per browser to select its sample workspace. The cookie expires after 30 days. Clearing it loses access to that workspace but does not delete the stored records. This is a demo access mechanism, not production user authentication. Use synthetic data only. Production and preview should use separate stores.
+
+Private Blob reads bypass cache and writes use ETag preconditions with bounded retries to prevent lost concurrent updates. This small JSON adapter is for demonstration only; production still requires the database, identity, retention/deletion, and compliance work listed below. Local mode continues using `.data/db.json` and does not upload existing local records.
+
 ## Optional OpenAI integration
 
 This is not required to start the product or run the current demo. Without an API key, constrained invoice commands use the deterministic parser. The API can be added later to improve interpretation of varied natural language; voice transcription is a separate later integration.

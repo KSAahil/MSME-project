@@ -1,7 +1,7 @@
 import "server-only";
 
 import { randomUUID } from "node:crypto";
-import { DEMO_ACTOR_ID, DEMO_BUSINESS_ID, getDatabase, withDatabaseWrite } from "../db";
+import { DEMO_ACTOR_ID, DEMO_BUSINESS_ID, getDatabase, isCloudDemo, withDatabaseWrite } from "../db";
 import { calculateInvoice } from "./gst";
 import type { Business, Customer, DatabaseShape, Invoice, InvoiceDraft, InvoicePreview, InvoiceStatus, Payment, PaymentMethod } from "./types";
 import { todayInIndia } from "../date";
@@ -45,6 +45,7 @@ export async function getSnapshot() {
     auditEvents: db.data.auditEvents.filter((entry) => entry.businessId === DEMO_BUSINESS_ID).slice(-50).reverse(),
     stats,
     mode: process.env.OPENAI_API_KEY ? "AI" : "DETERMINISTIC_DEMO",
+    cloudDemo: isCloudDemo(),
   };
 }
 

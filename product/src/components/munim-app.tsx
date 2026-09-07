@@ -16,6 +16,7 @@ type Snapshot = {
   payments: Payment[]; auditEvents: AuditEvent[];
   stats: { invoicedPaise: number; collectedPaise: number; outstandingPaise: number; overduePaise: number };
   mode: "AI" | "DETERMINISTIC_DEMO";
+  cloudDemo?: boolean;
 };
 
 async function requestJson<T>(url: string, options?: RequestInit): Promise<T> {
@@ -88,6 +89,7 @@ export function MunimApp() {
           <div><p className="eyebrow">{snapshot.business.name}</p><h1>{title}{tab === "home" ? `, ${snapshot.business.name.split(" ")[0]}` : ""}</h1></div>
           <div className="top-actions"><span className={`mode-badge ${snapshot.mode === "AI" ? "online" : ""}`}><span />{snapshot.mode === "AI" ? "AI connected" : "Safe demo mode"}</span><button className="icon-button" onClick={() => void refresh()} aria-label="Refresh"><RefreshCw size={18} /></button></div>
         </header>
+        {snapshot.cloudDemo && <div className="alert"><ShieldCheck size={18} /><span>Demo workspace · Use sample data only. Records belong to this browser. Clearing cookies or returning after 30 days starts a new workspace.</span></div>}
         {error && <div className="alert error"><TriangleAlert size={18} />{error}<button onClick={() => setError("")}><X size={16} /></button></div>}
         {tab === "home" && <Dashboard snapshot={snapshot} refresh={refresh} setTab={setTab} onPayment={setPaymentInvoice} onError={setError} />}
         {tab === "invoices" && <InvoicesView invoices={snapshot.invoices} onPayment={setPaymentInvoice} />}

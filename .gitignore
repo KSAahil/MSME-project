@@ -1,0 +1,10 @@
+# Local credentials, runtime files, and editor lock files
+.env*
+!.env.example
+.vercel/
+node_modules/
+.next/
+.data/
+*.tsbuildinfo
+~$*
+*.log
